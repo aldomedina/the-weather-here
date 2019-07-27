@@ -11,7 +11,7 @@ if ('geolocation' in navigator) {
             const api_url = `weather/${lat},${lon}`;    
             const response = await fetch(api_url);
             const json = await response.json();     
-            
+            console.log(json)
             // Select the data and do UI stuffs
             weather = json.weather.currently;
             aq = json.aq.results[0].measurements[0];            
